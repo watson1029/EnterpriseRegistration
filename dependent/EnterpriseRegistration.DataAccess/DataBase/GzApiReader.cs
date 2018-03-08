@@ -11,7 +11,7 @@ namespace EnterpriseRegistration.DataAccess.DataBase
 {
     public class GzApiReader
     {
-        public static readonly IConfigurationSection serviceAddress = Watson.Base.DotNetCore.ConfigurationHelper.Configuration.GetSection("ApiSetting");
+        private static readonly IConfigurationSection serviceAddress = Watson.Base.DotNetCore.ConfigurationHelper.Configuration.GetSection("ApiSetting");
 
         public static async Task<LoginResponse> Login(LoginRequest req)
         {
